@@ -2,13 +2,13 @@
 {
     public class RouteResult
     {
-        public RouteResult(int price, int time)
+        public RouteResult(double price, double time)
         {
             this.price = price;
             this.time = time;
         }
 
-        public int price { get; set; }
-        public int time { get; set; }
+        public double price { get; set; }
+        public double time { get; set; }
     }
 }

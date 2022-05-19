@@ -1,4 +1,5 @@
 ﻿using east_india_trading_co.Models;
+using east_india_trading_co.Util;
 using Microsoft.AspNetCore.Mvc;
 
 namespace east_india_trading_co.Controllers
@@ -7,12 +8,21 @@ namespace east_india_trading_co.Controllers
     [ApiController]
     public class CheapestRouteController : ControllerBase
     {
-        public RouteResult GetCheapestRoute(RouteRequest routeRequest)
+
+       
+        ShortestPathCalculator calculator = new ShortestPathCalculator();
+
+
+            public IActionResult GetCheapestRoute(RouteRequest routeRequest)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:7289/api/routeTest");
-            Console.WriteLine(routeRequest.to);
-            return new RouteResult(100, 300);
+            try
+            {
+                return Ok(calculator.TestCalc(routeRequest));
+
+            } catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
     }
 }
