@@ -18,7 +18,23 @@ namespace east_india_trading_co.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Orders()
+        {
+            return View();
+        }
+
+        public IActionResult Confirmation()
+        {
+            return View();
+        }
+
+        public IActionResult SearchResults()
+        {
+            return View();
+        }
+
+
+        public IActionResult CustomerDetails()
         {
             return View();
         }
