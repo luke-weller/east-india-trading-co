@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Customer Details";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="customerDetails">
+    <form style="float:left;padding-right:50px">
+        <label for="firstName">First name</label><br>
+        <input type="text" id="firstName" name="firstName" required>
+    </form>
+    <form style="float:left;">
+        <label for="lastName">Last name</label><br>
+        <input type="text" id="lastName" name="lastName" required><br>
+    </form>
+    <form style="clear:both;"></form>
+
+    <form>
+        <label for="company">Company</label><br>
+        <input type="text" id="company" name="company"><br>
+    </form>
+
+    <form>
+        <label for="address">Address</label><br>
+        <input type="text" id="address" name="address" required><br>
+    </form>
+
+    <form style="float:left;padding-right:50px">
+        <label for="city">City</label><br>
+        <input type="text" id="city" name="city" required><br>
+    </form>
+    <form  style="float:left;">
+        <label for="country">Country</label><br>
+        <input type="text" id="country" name="country" required><br>
+    </form>
+    <form style="clear:both;"></form>
+
+    <form>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required><br>
+    </form>
+
+    <form>
+        <label for="phone">Phone</label><br>
+        <input type="tel" id="phone" name="phone" required><br>
+    </form>
+
+    <form>
+        <label for="vat">VAT</label><br>
+        <input type="number" id="vat" name="vat" required><br>
+    </form>
+
+    <form style="clear:both;">&nbsp;</form>
+    <button>Order</button>
+
+</div>
