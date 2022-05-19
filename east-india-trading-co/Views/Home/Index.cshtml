@@ -2,11 +2,187 @@
     ViewData["Title"] = "Login";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="createBooking">
+  <h1>Create a new booking</h1>
+  <form style="float:left;padding-right:50px">
+      <label for="from">Departure</label><br>
+      <input type="text" id="from" name="from" placeholder="From" required>
+  </form>
+  <form style="float:left;">
+      <label for="to">Arrival</label><br>
+      <input type="text" id="to" name="to" placeholder="To" required><br>
+  </form>
+  <form style="clear:both;">&nbsp;</form>
+
+  <form style="float:left;padding-right:100px;">
+      <label for="send_date">Departure date</label><br>
+      <input type="date" id="send_date" name="send_date" required><br>
+  </form>
+  <form style="float:left;">
+      <label for="type">Parcel type</label><br>
+      <select name="type" id="type" required>
+      <option value="regular">Regular</option>
+      <option value="liveAnimal">Live Animal</option>
+      <option value="refrigerated">Refrigerated</option>
+      <option value="weapon">Weapon</option>
+      </select>
+  </form>
+  <form style="clear:both;">&nbsp;</form>
+
+  <form style="float:left;padding-right:50px">
+      <label for="weight">Parcel weight (&lt;100 kg)</label><br>
+      <input type="number" id="weight" name="weight" max="100" required><br>
+  </form>
+  <form  style="float:left;">
+      <label for="length">Length (cm)</label><br>
+      <input type="number" id="length" name="length" required><br>
+  </form>
+  <form style="clear:both;">&nbsp;</form>
+
+  <form style="float:left;padding-right:50px">
+      <label for="width">Width (cm)</label><br>
+      <input type="number" id="width" name="width" required><br>
+  </form>
+  <form  style="float:left;">
+      <label for="height">Height (cm)</label><br>
+      <input type="number" id="height" name="height" required><br>
+  </form>
+  <form style="clear:both;">&nbsp;</form>
+  
+  <button>Search</button>
 </div>
 
-<div>
-    
+<div class="routeSelection">
+    <center>
+    <h1>Select the parcel route</h1>
+    </center>
+
+    <table style="width:80%;margin:auto">
+      <tr>
+        <th> </th>
+        <th> </th>
+        <th>Est. delivery time</th>
+        <th>Est. arrival date</th>
+        <th>Price (USD)</th>
+      </tr>
+      <tr>
+        <td> 
+            <form>
+            <input type="radio" id="cheapestRoute" name="cheapestRoute">
+            </form>
+        </td>
+        <td>Cheapest</td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+      </tr>
+      <tr>
+        <td> 
+            <form>
+            <input type="radio" id="fastestRoute" name="fastestRoute">
+            </form>
+        </td>
+        <td>Quickest</td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+      </tr>
+      <tr>
+        <td> 
+            <form>
+            <input type="radio" id="greenestRoute" name="greenestRoute">
+            </form>
+        </td>
+        <td>Greenest</td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+      </tr>
+</table>
+</div>
+
+<div class="customerDetails">
+    <h1>Customer details</h1>
+
+    <form style="float:left;padding-right:50px">
+        <label for="firstName">First name</label><br>
+        <input type="text" id="firstName" name="firstName" required>
+    </form>
+    <form style="float:left;">
+        <label for="lastName">Last name</label><br>
+        <input type="text" id="lastName" name="lastName" required><br>
+    </form>
+    <form style="clear:both;"></form>
+
+    <form>
+        <label for="company">Company</label><br>
+        <input type="text" id="company" name="company"><br>
+    </form>
+
+    <form>
+        <label for="address">Address</label><br>
+        <input type="text" id="address" name="address" required><br>
+    </form>
+
+    <form style="float:left;padding-right:50px">
+        <label for="city">City</label><br>
+        <input type="text" id="city" name="city" required><br>
+    </form>
+    <form  style="float:left;">
+        <label for="country">Country</label><br>
+        <input type="text" id="country" name="country" required><br>
+    </form>
+    <form style="clear:both;"></form>
+
+    <form>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required><br>
+    </form>
+
+    <form>
+        <label for="phone">Phone</label><br>
+        <input type="tel" id="phone" name="phone" required><br>
+    </form>
+
+    <form>
+        <label for="vat">VAT</label><br>
+        <input type="number" id="vat" name="vat" required><br>
+    </form>
+
+    <form style="clear:both;">&nbsp;</form>
+    <button>Order</button>
+
+</div>
+
+<div class="orderConfirmation">
+    <h1>Order Confirmation</h1>
+    <p>
+        Your booking has been completed. 
+
+        A confirmation email with attached invoice has been sent to the customer at:
+    </p>
+    put in email entity
+
+    <h2>Order number: (XXXXX)</h2>
+    <h2>Summary</h2>
+
 </div>
