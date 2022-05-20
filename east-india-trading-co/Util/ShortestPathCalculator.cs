@@ -195,7 +195,11 @@ namespace east_india_trading_co.Util
         {
 
             double[] dist = gfg.dijkstra(map, getCityIdByName(from));
-            
+            double priceResult = dist[getCityIdByName(to)];
+            if (priceResult == 0 || priceResult == double.MaxValue)
+            {
+                throw new HttpRequestException("We couldn't calculate the price for this delivery! OA's and Tl's fault!");
+            }
             return new RouteResult(dist[getCityIdByName(to)], 0);
         }
 

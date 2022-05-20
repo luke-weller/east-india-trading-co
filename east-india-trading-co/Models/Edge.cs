@@ -38,6 +38,12 @@ namespace east_india_trading_co.Models
                     }
                     this.Price = (double)JsonNode.Parse(result).AsObject()[type == 1 ? "price" : "cost"];
                 }
+            } else
+            {
+                if (routeRequest.weight > 100)
+                {
+                    this.Price = 0;
+                }
             }
 
         }
