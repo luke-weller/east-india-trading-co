@@ -10,14 +10,15 @@ namespace east_india_trading_co.Controllers
     {
 
        
-        ShortestPathCalculator calculator = new ShortestPathCalculator();
-
+        
 
             public IActionResult GetCheapestRoute(RouteRequest routeRequest)
         {
+
             try
             {
-                return Ok(calculator.TestCalc(routeRequest));
+                ShortestPathCalculator calculator = new ShortestPathCalculator(routeRequest);
+                return Ok(calculator.Result);
 
             } catch (Exception e)
             {
