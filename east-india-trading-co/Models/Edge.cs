@@ -16,7 +16,7 @@ namespace east_india_trading_co.Models
             this.Type = type;
             this.CityPair = new List<Node>() { city1, city2 };
             this.Unit = unit;
-            this.Price = unit*5;
+            this.Price = unit*8;
             city1.Edges.Add(this);
             city1.Adjecent.Add(city2);
             city2.Edges.Add(this);
@@ -40,9 +40,23 @@ namespace east_india_trading_co.Models
                 }
             } else
             {
-                if (routeRequest.weight > 100)
+                int parcelType = routeRequest.type;
+
+                if (routeRequest.weight > 100 || parcelType == 8 || parcelType == 5)
                 {
                     this.Price = 0;
+                }
+                if (parcelType == 7)
+                {
+                    this.Price = this.Price * 1.2;
+                }
+                if (parcelType == 1)
+                {
+                    this.Price = this.Price * 1.25;
+                }
+                if (parcelType == 3)
+                {
+                    this.Price = this.Price * 1.1;
                 }
             }
 
