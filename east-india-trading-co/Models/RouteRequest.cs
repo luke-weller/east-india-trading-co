@@ -25,7 +25,7 @@ namespace east_india_trading_co.Models
         public double weight { get; set; }  
         [Required]
         public double width { get; set; }
-        [Required]
+        [Required] 
         public double height { get; set; }
         [Required]
         public double length { get; set; }
